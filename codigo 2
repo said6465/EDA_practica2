@@ -1,0 +1,73 @@
+/*16/03/21 21:15
+Programado por:
+Aguilar Ramos Enrique Alejandro
+Flores Virgilio Gabriela Abigail
+Garcia Garcia Rafael 
+Huaso Aguilar Juan Manuel
+Sanchez Salazar Irvin Said
+*/
+#include <stdio.h>
+#include<stdlib.h>
+
+int main(){
+	int *apentero;
+	char  *apcar;
+	double *apdoble;
+	long *aplong;
+	float *apflotante;
+	short *apshort;
+	//Comenzamos con la declaración de variables 
+	apentero= (int*)malloc(4*sizeof(int));
+	apcar=(char*)malloc(sizeof(char));
+	apdoble= (double*)malloc(sizeof(double));
+	aplong =(long*)malloc(sizeof(long));
+	apflotante= (float*)malloc(sizeof(float));
+	apshort= (short*)malloc(sizeof(short));
+	//Llamamos a malloc y ponemos el tamaño según nuestro tipo de variable
+	printf("\n La direccion de memoria de las variables anonimas son:\n\a");
+	printf("\n Variable Int %p\n ", &apentero);
+	printf("\n Variable Char %p \n", &apcar);
+	printf("\n Variable double %p\n ", &apdoble);
+	printf("\n Variable long %p \n", &aplong);
+	printf("\n Variable float %p \n", &apflotante);
+	printf("\n Variable short %p \n", &apshort);
+    //Imprimimos su dirección de memoria 
+	printf("\n\n");
+	//Declaramos nuestras variables del tipo del que queramos ingresar su valor
+	//Ligamos esa variable con nuestro apuntador
+	*apentero=6;
+	*apcar='b';
+	*apdoble=154789632;
+	*aplong=84024542;
+	*apflotante=1.23;
+	*apshort=-5215;
+	printf ("\nVALORES INICIALES\n\n");
+	printf("\nEl valor de a que es tipo int es %d\n", *apentero);
+	printf("\nEl valor de b que es tipo char es %c\n",*apcar);
+	printf("\nEl valor de c que es tipo double es %lf\n",*apdoble);
+	printf("\nEl valor de d que es tipo long es %ld\n",*aplong);
+	printf("\nEl valor de e que es tipo float es %.2f\n",*apflotante);
+	printf("\nEl valor de f que es tipo short es %d\n",*apshort);
+    //cambiamos el valor de la variable para que así nos imprima otro valor.
+	*apentero=17;
+	*apcar='c';
+	*apdoble=14789332289;
+	*aplong=45421878;
+	*apflotante=4.25;
+	*apshort=-4272;
+	printf("\n\nVALORES CAMBIADOS\n\n");
+	printf("\nEl valor de a que es tipo int es %d\n", *apentero);
+	printf("\nEl valor de b que es tipo char es %c\n",*apcar);
+	printf("\nEl valor de c que es tipo double es %lf\n",*apdoble);
+	printf("\nEl valor de d que es tipo long es %ld\n",*aplong);
+	printf("\nEl valor de e que es tipo float es %.2f\n",*apflotante);
+	printf("\nEl valor de f que es tipo short es %d\n",*apshort);
+	//Liberamos memoria que reservamos 
+	free(apentero);
+	free(apcar);
+	free(apdoble);
+	free(aplong);
+	free(apflotante);
+	free(apshort);
+	return 0;
+}
