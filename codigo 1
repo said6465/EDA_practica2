@@ -1,0 +1,90 @@
+/*12/03/21 12:01
+Programado por:
+Huaso Aguilar Juan Manuel
+Aguilar Ramos Enrique Alejandro
+Flores Virgilio Gabriela Abigail
+Garcia Garcia Rafael
+Sanchez Salazar Irvin Said
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	/*Se declaren variables de tipo: int, char, double, long, float y short.*/
+	int a;
+	char b;
+	double c;
+	long d;
+	float e;
+	short f;
+	
+	/*Se declare un apuntador para cada una de las variables anteriores.*/
+	int *Entero;
+	char *Caracter;
+	double *Real_doble;
+	long *Entero_largo;
+	float *Real;
+	short *Entero_corto;
+	
+	/*Se asigne la dirección de memoria a cada apuntador de la variable correspondiente.
+	  Usar el operador de dirección (&).*/
+	Entero = &a;
+	Caracter = &b;
+	Real_doble = &c;
+	Entero_largo = &d;
+	Real = &e;
+	Entero_corto = &f;
+		
+	/*Mostrar que el valor apuntado por el apuntador es igual que la dirección de memoria
+	 de la variable que apunta.*/
+	printf("\n[int] Valor apuntado por el apuntador: %p", Entero);
+	printf("\n[int] La direccion de memoria de la variable que apunta: %p", &a);
+	printf("\n\n[char] Valor apuntado por el apuntador: %p", Caracter);
+	printf("\n[char] La direccion de memoria de la variable que apunta: %p", &b);
+	printf("\n\n[double] Valor apuntado por el apuntador: %p", Real_doble);
+	printf("\n[double] La direccion de memoria de la variable que apunta: %p", &c);
+	printf("\n\n[long] Valor apuntado por el apuntador: %p", Entero_largo);
+	printf("\n[long] La direccion de memoria de la variable que apunta: %p", &d);
+	printf("\n\n[float] Valor apuntado por el apuntador: %p", Real);
+	printf("\n[float] La direccion de memoria de la variable que apunta: %p", &e);
+	printf("\n\n[short] Valor apuntado por el apuntador: %p", Entero_corto);
+	printf("\n[short] La direccion de memoria de la variable que apunta: %p\n\n", &f);
+	
+	/*Asigna un valor a las variables*/
+	a = 2;
+	b = 'Z';
+	c = 1.1E+200;
+	d = 2140000000;
+	e = 3.1416;
+	f = 30000;
+	
+	/*Usar el operador (*) para imprimir los valores de las variables usando los
+	  apuntadores*/
+	printf("\n\nValor de variables [valor original]:");
+	printf("\n[int] Valor de la variable usando el apuntador: %d", *Entero);
+	printf("\n[char] Valor de la variable usando el apuntador: %c", *Caracter);
+	printf("\n[double] Valor de la variable usando el apuntador: %lf", *Real_doble);
+	printf("\n[long] Valor de la variable usando el apuntador: %ld", *Entero_largo);
+	printf("\n[float] Valor de la variable usando el apuntador: %f", *Real);
+	printf("\n[short] Valor de la variable usando el apuntador: %d\n\n", *Entero_corto);
+	
+	/*Modificar los valores de las variables mediante el operador (*) y los apuntadores*/
+	*Entero = 9;
+	*Caracter ='R';
+	*Real_doble = 4.5E+200;
+	*Entero_largo = 1122112344;
+	*Real = 67.454254;
+	*Entero_corto = 23043;
+	
+	/*Mostrar que al modificar mediante el apuntador se modifica el valor de la variable*/
+	printf("\n\nValor de variables [valor modificado]:");
+	printf("\n[int] Valor de la variable usando el apuntador: %d", a);
+	printf("\n[char] Valor de la variable usando el apuntador: %c", b);
+	printf("\n[double] Valor de la variable usando el apuntador: %lf", c);
+	printf("\n[long] Valor de la variable usando el apuntador: %ld", d);
+	printf("\n[float] Valor de la variable usando el apuntador: %f", e);
+	printf("\n[short] Valor de la variable usando el apuntador: %d", f);
+	printf("\n");
+	
+	return 0;
+}
