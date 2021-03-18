@@ -1,0 +1,84 @@
+//11/03/21 10:10
+/*Programado por: Garcia Garcia Rafael
+Flores Virgilio Gabriela Abigail
+Huaso Aguilar Juan Manuel
+Aguilar Ramos Enrique Alejandro
+Sanchez Salazar Irvin Said
+*/
+#include <stdio.h>
+#include <math.h>
+void suma(int*, int*);
+void resta(int*, int*);
+void mult(int*, int*);
+void divi(float*, float*);
+
+int main(){
+	int a,b,m;
+	printf("\t Calculadora\n\a");
+	printf("\t 1) Suma\n");
+	printf("\t 2) Resta\n");
+	printf("\t 3) Multiplicacion\n");
+	printf("\t 4) Division\n");
+	scanf("%d", &m);
+	void(*op[])(int*, int*)={suma, resta, mult, divi,};
+	//MenÃº que cuenta con las operaciones.
+    switch(m)
+    {
+        case 1:
+        printf("\tSuma\n");
+        printf("Ingresa el primer numero\n");
+        scanf("%d", &a);
+        printf("Ingresa el segundo numero\n");
+        scanf("%d", &b);
+        op[0](&a, &b);
+        break;
+        
+        case 2:
+        printf("\tResta\n");
+        printf("Ingresa el primer numero\n");
+        scanf("%d", &a);
+        printf("Ingresa el segundo numero\n");
+        scanf("%d", &b);
+        op[1](&a, &b);
+        break;
+        
+        case 3:
+        printf("\tMultiplicacion\n");
+        printf("Ingresa el primer numero\n");
+        scanf("%d", &a);
+        printf("Ingresa el segundo numero\n");
+        scanf("%d", &b);
+        op[2](&a, &b);
+        break;
+        
+        case 4:
+        printf("\tDivision\n");
+        printf("Ingresa el primer numero\n");
+        scanf("%d", &a);
+        printf("Ingresa el segundo numero\n");
+        scanf("%d", &b);
+        op[3](&a, &b);
+        break;
+        
+    }
+  
+}
+//funciones tipo void con apuntadores y que tienen las variables a, b y retornan el resultado c 
+void suma(int *a, int *b){
+    int c = *a + *b;
+    printf("La suma es: %d\n",c);
+}
+
+void resta(int *a, int *b){
+    int c = *a - *b;
+    printf("La resta es: %d\n",c);
+}
+
+void mult(int *a, int *b){
+    int c = *a * *b;
+    printf("La multiplicacion es: %d\n",c);
+}
+void divi(float *a, float *b){
+    float c = (*a)/(*b);
+    printf("La division es: %.2f\n",c);
+}
