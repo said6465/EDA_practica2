@@ -1,0 +1,32 @@
+//11/03/21 9:40
+/*Programado por: Garcia Garcia Rafael
+Flores Virgilio Gabriela Abigail
+Huaso Aguilar Juan Manuel
+Aguilar Ramos Enrique Alejandro
+Sanchez Salazar Irvin Said 
+*/
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    
+    int arr[10] = {0,1,2,3,4,5,6,7,8,9};
+    int *ptr;
+    ptr =&arr[2];
+    
+    
+    arr[1]= 5; // equivale a *(arr+1)=5;
+    
+    printf("\n %d",ptr); //a
+    printf("\n %d",*ptr); //b
+    printf("\n %d",ptr[0]); //c
+    printf("\n %d",*ptr+6); //d
+    printf("\n %d",*(ptr+6)); //e
+    printf("\n %d",*ptr-1); //f
+    printf("\n %d",ptr[-1]); //g
+    printf("\n %d",ptr[9]); //h
+    printf("\n %p",&arr); //i
+    printf("\n %p",&ptr); //j
+    printf("\n %p",&*ptr); //k
+    
+    return 0;
+}
